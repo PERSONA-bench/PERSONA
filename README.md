@@ -5,24 +5,44 @@ A step‑by‑step walkthrough for reproducing the **Personalized Conversation
 ---
 
 ## 1 · Project layout
-
 ```
-.
-├── demo/                      # toy sample used in the paper
-│   ├── demo.json
-│   └── …
-├── LLMEvaluators/             # common evaluation utilities (imported by GPT*.py)
-├── PromptMakers/              # reusable prompt‑building modules
-├── 3.1PromptMaker.py          # Task 3 .1 – sentiment classification prompt generator
-├── 3.2PromptMaker.py          # Task 3 .2 – exact‑score regression prompt generator
-├── 3.3PromptMaker.py          # Task 3 .3 – next‑reply generation prompt generator
-├── GPT3.1.py                  # Azure OpenAI evaluator for Task 3 .1
-├── GPT3.2.py                  # Azure OpenAI evaluator for Task 3 .2
-├── GPT3.3.py                  # Azure OpenAI evaluator for Task 3 .3 / 3 .4
-├── requirements.txt           # all runtime dependencies
-└── README.md                  # ← **you are here**
+│  README.md
+│  requirements.txt
+│
+├─demo
+│      3.1PromptMaker.py
+│      3.2PromptMaker.py
+│      3.3PromptMaker.py
+│      demo.json
+│      GPT3.1.py
+│      GPT3.2.py
+│      GPT3.3.py
+│
+├─LLMEvaluators
+│  ├─3.1
+│  │      Claude.py
+│  │      GPT.py
+│  │      LlamaAndDeepSeek_batch_eval.py
+│  │
+│  ├─3.2
+│  │      Claude.py
+│  │      GPT.py
+│  │      LlamaAndDeepSeek_batch_eval.py
+│  │
+│  └─3.3
+│          Claude.py
+│          GPT-4o-mini.py
+│          GPT4.1.py
+│          GPT4.1_Random_Task.py
+│
+└─PromptMakers
+        3.1PromptMaker.py
+        3.1_RandPrompt.py
+        3.2PromptMaker.py
+        3.2_RandPrompt.py
+        3.3PromptMaker.py
+        3.3_RandPrompt.py
 ```
-
 ---
 
 ## 2 · Prerequisites
