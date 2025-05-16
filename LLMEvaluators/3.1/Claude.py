@@ -4,8 +4,8 @@ import time
 import datetime
 import logging
 from collections import defaultdict
-import threading # 引入多线程模块
-import math # 用于向上取整
+import threading
+import math 
 
 import vertexai
 import warnings

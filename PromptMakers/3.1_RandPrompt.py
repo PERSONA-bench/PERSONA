@@ -8,7 +8,7 @@ import random
 
 # --- Configuration ---
 INPUT_JSON_FILE = "merged_posts_remapped.json"
-OUTPUT_JSONL_FILE = "WithConversationPrompts_ScorePrediction_PseudoRandomContext.jsonl"  # 修改了文件名以反映新的逻辑
+OUTPUT_JSONL_FILE = "WithConversationPrompts_ScorePrediction_PseudoRandomContext.jsonl"
 
 skipped_post_count = 0
 processed_post_count = 0

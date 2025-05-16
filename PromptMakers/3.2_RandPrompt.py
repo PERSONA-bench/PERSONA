@@ -10,7 +10,7 @@ import random
 INPUT_JSON_FILE = "merged_posts_remapped.json"
 # Output will be a single JSONL file where each line is an object
 # containing the post_data_store and the prediction_task.
-OUTPUT_JSONL_FILE = "WithConversationPrompts_PseudoRandomContext_ExactScorePrediction.jsonl"  # 文件名更改以反映新逻辑
+OUTPUT_JSONL_FILE = "WithConversationPrompts_PseudoRandomContext_ExactScorePrediction.jsonl"  
 # WITHOUT_CONVO_OUTPUT_JSONL is no longer the focus.
 # WITHOUT_CONVO_OUTPUT_JSONL = "WithoutConversationPrompts_ExactScorePrediction.jsonl"
 

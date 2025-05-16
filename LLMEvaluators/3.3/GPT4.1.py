@@ -130,9 +130,10 @@ TASK_NAME = "Predict_Body_Text_3.3" if FLAG_33 else "Generate_Conversation_3.4"
 
 # --- General Configuration ---
 if FLAG_33:
-    # INPUT_JSONL_PATH = "WithConversationPrompts_BodyPrediction_v2.jsonl"
-    INPUT_JSONL_PATH = "WithoutConversationPrompts_BodyPrediction_v2.jsonl"
-    OUTPUT_DIR = f"eval_results_{TASK_NAME}"
+    INPUT_JSONL_PATH = "WithConversationPrompts_BodyPrediction_v2.jsonl"
+    # INPUT_JSONL_PATH = "WithoutConversationPrompts_BodyPrediction_v2.jsonl"
+    # INPUT_JSONL_PATH = "WithPseudoRandomConversationPrompts_BodyPrediction.jsonl"
+    OUTPUT_DIR = f"eval_random_results_{TASK_NAME}"
     GENERATION_MAX_TOKENS = 256;
     NUM_CANDIDATES = 10;
     GENERATION_TEMPERATURE = 0.7
@@ -157,21 +158,12 @@ MAX_RETRIES = 1;
 RETRY_DELAY_SECONDS = 3
 SBERT_MODEL_NAME = 'all-MiniLM-L6-v2'
 LOW_SIM_THRESHOLD = 0.1;
-HIGH_SIM_THRESHOLD = 0.9
-DEFAULT_API_VERSION = "";
+HIGH_SIM_THRESHOLD = 1.0;
+DEFAULT_API_VERSION = "2024-02-15-preview";
 REQUIRED_NEW_API_VERSION = "2024-12-01-preview"  # Example, adjust if needed
 
 # --- Model Definitions ---
 MODEL_CONFIGS = {
-    "gpt-4.1": {"api_type": "azure", "api_key": "",
-                           "azure_endpoint": "https://eastus2instancefranck.openai.azure.com/",
-                           "api_version": DEFAULT_API_VERSION, "deployment_name": "gpt-4.1"},
-    "gpt-4o": {"api_type": "azure", "api_key": "",
-                          "azure_endpoint": "https://vietgpt.openai.azure.com/", "api_version": DEFAULT_API_VERSION,
-                          "deployment_name": "gpt-4o"},
-    "gpt-4o-mini": {"api_type": "azure", "api_key": "",
-                             "azure_endpoint": "https://vietgpt.openai.azure.com/", "api_version": DEFAULT_API_VERSION,
-                             "deployment_name": "gpt-4o-mini"},
 }
 # --- End Model Definitions ---
 
@@ -432,7 +424,7 @@ def main():
     if not prompts_data: logger.error("No valid prompts found after reading. Exiting."); sys.exit(0)
     logger.info(f"Read {len(prompts_data)} valid prompts.")
 
-    limit = 5 if test_flag else (500 if CUT else None)
+    limit = 5 if test_flag else (100 if CUT else None)
     prompts_to_process = prompts_data[:limit] if limit else prompts_data
     final_prompt_index = len(prompts_to_process) - 1
     run_mode = f"TEST MODE - First {len(prompts_to_process)}" if test_flag else (

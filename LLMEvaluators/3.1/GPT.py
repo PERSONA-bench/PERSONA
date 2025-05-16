@@ -10,8 +10,6 @@ import argparse
 
 # --- Model Definitions (As provided by user) ---
 DEFAULT_API_VERSION = ""
-# REQUIRED_NEW_API_VERSION = "2024-12-01-preview" # Not directly used unless a model config specifies it
-
 MODEL_CONFIGS = {
     "gpt-4.1": {"api_type": "azure", "api_key": "",
                            "azure_endpoint": "https://eastus2instancefranck.openai.azure.com/",
