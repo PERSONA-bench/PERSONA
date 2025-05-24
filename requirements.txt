@@ -1,0 +1,14 @@
+aiolimiter==1.2.1
+anthropic==0.51.0
+boto3==1.38.17
+google_cloud_aiplatform==1.90.0
+httpx==0.28.1
+nltk==3.9.1
+numpy==2.2.5
+openai==1.78.1
+protobuf==6.31.0
+rouge_score==0.1.2
+scikit_learn==1.6.1
+sentence_transformers==4.1.0
+torch==2.6.0
+tqdm==4.67.1

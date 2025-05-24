@@ -14,7 +14,7 @@ OUTPUT_JSONL_FILE = "WithConversationPrompts_PseudoRandomContext_ExactScorePredi
 # WITHOUT_CONVO_OUTPUT_JSONL is no longer the focus.
 # WITHOUT_CONVO_OUTPUT_JSONL = "WithoutConversationPrompts_ExactScorePrediction.jsonl"
 
-PROMPT_SIGN_HINT = True  # 用户定义的提示分数符号标志
+PROMPT_SIGN_HINT = True
 
 skipped_post_count = 0
 processed_post_count = 0

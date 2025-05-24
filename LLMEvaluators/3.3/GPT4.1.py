@@ -163,7 +163,7 @@ DEFAULT_API_VERSION = "2024-02-15-preview";
 REQUIRED_NEW_API_VERSION = "2024-12-01-preview"  # Example, adjust if needed
 
 # --- Model Definitions ---
-MODEL_CONFIGS = {
+MODEL_CONFIGS = { ###
 }
 # --- End Model Definitions ---
 
