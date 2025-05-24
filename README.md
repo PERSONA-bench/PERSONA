@@ -303,7 +303,7 @@ Open *LogEvaluator* and update `INPUT_JSONL_FILE` (plus any other paths) before 
 ---
 
 ## Tested Models
-## Tested Models
+
 | Model | Year | Type |
 |-------|------|------|
 | GPT-4.1 | 2025 | Commercial |
